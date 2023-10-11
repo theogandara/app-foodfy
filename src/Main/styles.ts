@@ -1,6 +1,18 @@
 import styled from 'styled-components/native';
-import { Platform } from 'react-native';
 
-const isAndroid = Platform.OS === 'android';
+export const CategoriesContainer = styled.View`
+  height: 75px;
+  margin-top: 32px;
+`;
 
-export const Container = styled.SafeAreaView``;
+export const MenuContainer = styled.View`
+  margin-top: 32px;
+  flex: 1;
+`;
+
+export const FooterContainer = styled.SafeAreaView``;
+
+export const Footer = styled.View`
+  background-color: #fff;
+  padding: 16px 24px;
+`;
