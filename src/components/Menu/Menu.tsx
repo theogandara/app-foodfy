@@ -9,11 +9,11 @@ import { products } from '../../mocks/products';
 export function Menu() {
   const [selectedCategory, setSelectedCategory] = useState('');
 
-  function handleCategoryPress(id: string) {
-    const category = selectedCategory === id ? '' : id;
+  // function handleCategoryPress(id: string) {
+  //   const category = selectedCategory === id ? '' : id;
 
-    setSelectedCategory(category);
-  }
+  //   setSelectedCategory(category);
+  // }
 
   return (
     <FlatList
@@ -23,7 +23,15 @@ export function Menu() {
       contentContainerStyle={{ paddingRight: 24 }}
       keyExtractor={(item) => item._id}
       renderItem={({ item }) => {
-        return <></>;
+        return (
+          <S.Product>
+            <S.Image />
+
+            <Text>{item.name}</Text>
+            <Text>{item.description}</Text>
+            <Text weight="400">{item.price}</Text>
+          </S.Product>
+        );
       }}
     />
   );

@@ -6,6 +6,7 @@ export const CategoriesContainer = styled.View`
 `;
 
 export const MenuContainer = styled.View`
+  flex-direction: column;
   margin-top: 32px;
   flex: 1;
 `;
